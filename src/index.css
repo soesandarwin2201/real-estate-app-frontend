@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;1,400;1,700&family=Roboto:ital,wght@1,300&family=Slabo+27px&display=swap');
+
+* {
+     border: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Slabo 27px', serif;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+:root {
+     --background-color: #1D1C33;
+     --btn-color: #BAE8E8;
+     --house-bg-color: #E3F6F5;
+     --text-color: #fff;
+     
+     --box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
