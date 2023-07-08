@@ -4,7 +4,7 @@
      border: 0;
      margin: 0;
      box-sizing: border-box;
-     font-family: 'Slabo 27px', serif;
+     list-style: none;
 }
 
 html {
@@ -14,8 +14,67 @@ html {
 :root {
      --background-color: #1D1C33;
      --btn-color: #BAE8E8;
+     --nav-color: #2C698D;
      --house-bg-color: #E3F6F5;
      --text-color: #fff;
-     
+     --main-text-color: #00008B;
      --box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+body {
+     font-size: 0.89rem;
+     font-family: 'Slabo 27px', serif;
+     line-height: 1.5;
+     letter-spacing: 1.4;
+     background-color: var(--background-color);
+}
+
+.logo-section {
+     width: 100%;
+     height: 100vh;
+     background: url(./assets/city.svg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.logo-info {
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+     align-items: center;
+     margin-bottom: 1rem;
+}
+
+.logo-header {
+     color: var(--text-color);
+     font-size: 3rem;
+     letter-spacing: 1.5;
+     font-weight: 800;
+     text-shadow: 1px 1px 2px white;
+}
+
+.logo-info-para {
+     color: var(--text-color);
+     font-size: 1.2rem;
+     font-weight: 600;
+     text-transform: capitalize;
+     letter-spacing: 1.5;
+     line-height: 1.6;
+     text-align: center;
+}
+
+.explore-btn {
+     width: 150px;
+     padding: .5rem 2rem;
+     border-radius: .5rem;
+     text-transform: capitalize;
+     background-color: var(--btn-color);
+     color: var(--background-color);
+     font-weight: 600;
+     box-shadow: var(--box-shadow);
 }
