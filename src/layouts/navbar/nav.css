@@ -1,0 +1,40 @@
+.navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--background-color);
+     padding: 2rem;
+     border-radius: 0 0 3rem 3rem;
+}
+
+.nav-menu {
+     display: flex;
+     gap: 1.4rem;
+}
+
+.nav-logo {
+     color: var(--text-color);
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: 900;
+     text-shadow: 1px 1px 2px #BAE8E8;
+}
+
+.map-icon {
+     color: var(--text-color);
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: 900;
+     text-shadow: 1px 1px 2px #BAE8E8;
+}
+
+.nav-items:hover {
+   background-color: var(--nav-color);
+   border-radius: 5px;
+}
+
+.nav-link {
+     text-decoration: none;
+     font-size: 1.2rem;
+     color: var(--text-color);
+}
