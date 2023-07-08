@@ -79,3 +79,19 @@ body {
      box-shadow: var(--box-shadow);
 }
 
+@media screen and (max-width: 600px) {
+     .logo-info {
+          gap: .2rem;
+          background-color: var(--background-color);
+          margin-bottom: 5rem;
+     }
+
+     .logo-header {
+          font-size: 2rem;
+     }
+
+     .logo-info-para {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+     }
+}
