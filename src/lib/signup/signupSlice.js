@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const SIGN_UP = 'newuser/signup/';
+const SIGN_UP = 'house/newuser/SIGNUP/';
 
 const token = localStorage.getItem('token') || null;
 
@@ -35,9 +35,9 @@ const signupSlice = createSlice({
           reset: (state) => ({
             ...state,
             isLoading: false,
+            error: null,
             success: false,
-            error: '',
-            message: '',
+            status: '',
           }),
         },
      extraReducers(reduce) {
@@ -65,4 +65,5 @@ const signupSlice = createSlice({
      }
 })
 
+export const { reset } = signupSlice.actions;
 export default signupSlice.reducer;
