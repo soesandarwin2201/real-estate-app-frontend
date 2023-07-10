@@ -13,5 +13,17 @@ const Input = ({
           </label>
       );
 }
+
+Input.propTypes = {
+     name: PropTypes.string.isRequired,
+     type: PropTypes.string.isRequired,
+     onInput: PropTypes.func.isRequired,
+     value: PropTypes.string.isRequired,
+     isValid: PropTypes.bool,
+   };
+   
+Input.defaultProps = {
+     isValid: true,
+};
  
 export default Input;
