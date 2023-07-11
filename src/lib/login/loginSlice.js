@@ -1,8 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { create } from "domain";
-import { userInfo } from "os";
-import { async } from "q";
 
 const LOGIN = 'house/authentication/LOGIN';
 const token = localStorage.getItem('token') || null;
