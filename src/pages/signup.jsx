@@ -21,7 +21,7 @@ const SignUp = () => {
 
      return ( 
           <section className="signup-section">
-                 <div className="image-cotainer">
+                 <div className="image-cotainer desktop">
                     <h1>Welcome To Mandalar May App</h1>
                     <h2>Let's Find your dream House</h2>
                  </div>
