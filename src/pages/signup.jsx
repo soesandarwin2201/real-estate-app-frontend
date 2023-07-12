@@ -21,54 +21,57 @@ const SignUp = () => {
 
      return ( 
           <section className="signup-section">
+                 <div className="image-cotainer">
+                    <h1>Welcome To Mandalar May App</h1>
+                    <h2>Let's Find your dream House</h2>
+                 </div>
                <form className="signup-form">
-
-                    <div className="form-items">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" placeholder="type your name" className="form-input" />
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="userName">User Name</label>
-                    <input type="text" name="username" placeholder="type your user name" className="form-input" />
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="Email">Email</label>
-                    <input type="text" name="email" placeholder="type your email" className="form-input" />
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="Password">Password</label>
-                    <input type="text" name="password" placeholder="type your password" className="form-input" />
-                    </div>
-                    
-                    <div className="form-items">
-                    <label htmlFor="Password Confirmation">Password Confirmation</label>
-                    <input type="text" name="password" placeholder="type your password confirmation" className="form-input" />
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="Address">Address</label>
-                    <input type="text" name="address" placeholder="type your address" className="form-input" />
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="Company Name">Company Name</label>
-                    <input type="text" name="company name" placeholder="type your company name" className="form-input" />
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="Details">Details</label>
-                    <input type="text" name="details" placeholder="type your company information or your experience" className="form-input" />
-                    </div>
-                       
-                    <div className="form-items">
+                   <div className="avatar-container form-items">
                     <label>
                     {avatarData ? avatarData.name : 'Change Avatar'}
                     <input type="file" accept="image/*" hidden  />
                     </label>
                     </div>
+                    <div className="form-items">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" name="name" placeholder="type your name" className="form-input" />
+                    </div>
+
+                    <div className="form-items">
+                    <label htmlFor="userName" className="form-label">User Name</label>
+                    <input type="text" name="username" placeholder="type your user name" className="form-input" />
+                    </div>
+
+                    <div className="form-items">
+                    <label htmlFor="Email" className="form-label">Email</label>
+                    <input type="text" name="email" placeholder="type your email" className="form-input" />
+                    </div>
+
+                    <div className="form-items">
+                    <label htmlFor="Password" className="form-label">Password</label>
+                    <input type="text" name="password" placeholder="type your password" className="form-input" />
+                    </div>
+                    
+                    <div className="form-items">
+                    <label htmlFor="Password Confirmation" className="form-label">Password Confirmation</label>
+                    <input type="text" name="password" placeholder="type your password confirmation" className="form-input" />
+                    </div>
+
+                    <div className="form-items">
+                    <label htmlFor="Address" className="form-label">Address</label>
+                    <input type="text" name="address" placeholder="type your address" className="form-input" />
+                    </div>
+
+                    <div className="form-items">
+                    <label htmlFor="Company Name" className="form-label">Company Name</label>
+                    <input type="text" name="company name" placeholder="type your company name" className="form-input" />
+                    </div>
+
+                    <div className="form-items">
+                    <label htmlFor="Details" className="form-label">Details</label>
+                    <textarea type="text" name="details" placeholder="type your company information or your experience" className="form-input text-area" />
+                    </div>
+                       
                     
                     <div className="form-items">
                          {

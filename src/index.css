@@ -84,6 +84,67 @@ body {
      height: 100vh;
 }
 
+.signup-section {
+     width: 95vw;
+     margin-inline: 1rem;
+     margin-top: 9.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 4rem;
+     border: 1px solid #00008B;
+     box-shadow: var(--box-shadow);
+     border-radius: 6px;
+     padding: 2rem;
+}
+
+.avatar-container {
+     border: 1px dotted #1D1C33;
+     padding: 2rem;
+}
+
+.form-label {
+     font-size: 1rem;
+     font-weight: 500;
+}
+
+.image-cotainer {
+     flex-basis: 50%;
+     background: url(./assets/idea.svg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 380px;
+     height: 380px;
+}
+
+.signup-form {
+     flex-basis: 50%;
+     width: 100%;
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: .5rem;
+}
+
+.form-items {
+     display: flex;
+     flex-direction: column;
+}
+
+.form-input {
+     padding: .5rem 4rem;
+     outline: 0;
+     border: 0;
+     border-radius: 6px;
+     box-shadow: var(--box-shadow);
+}
+
+.text-area {
+     padding: 3rem 4rem;
+}
+
 @media screen and (max-width: 600px) {
      .logo-info {
           gap: .2rem;
@@ -99,10 +160,4 @@ body {
           font-size: 1.1rem;
           margin-bottom: 1rem;
      }
-}
-
-.signup-section {
-     background-color: #1D1C33;
-     width: 65vw;
-     margin-top: 10rem;
 }
