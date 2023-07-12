@@ -100,3 +100,9 @@ body {
           margin-bottom: 1rem;
      }
 }
+
+.signup-section {
+     background-color: #1D1C33;
+     width: 65vw;
+     margin-top: 10rem;
+}

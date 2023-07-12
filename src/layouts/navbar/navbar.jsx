@@ -27,7 +27,7 @@ const Navbar = () => {
                     <Link to={link.path} className="nav-link">{link.title}</Link>
                </li>
           ))}
-          <button className="signup-btn">SignUp</button>
+          <button className="signup-btn"><Link to="/signup" className="nav-link">Sign up</Link></button>
          </ul>
          
          <ul className="mobile-nav-menu mobile">
