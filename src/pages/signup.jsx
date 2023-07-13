@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -9,8 +10,6 @@ import '../index.css'
 const SignUp = () => {
      const dispatch = useDispatch();
      const navigate = useNavigate();
-     const { error: errorLogin } = useSelector((state) => state.authentication);
-     const { error : errorSignup, success, message } = useSelector((state) => state.registration);
      const [ name, setName ] = useState('');
      const [ userName, setUserName ] = useState('');
      const [email, setEmail] = useState('');
@@ -24,10 +23,21 @@ const SignUp = () => {
 
      const handleSubmit = (e) => {
           e.preventDefault();
-          const userData = { name,userName, email, password, passwordconfirmation, address,details, company_name, avatarData , phones };
-          dispatch(newUser({ user: userData }));
+          const formData = new FormData();
+          formData.append('name', name);
+          formData.append('username', userName);
+          formData.append('email', email);
+          formData.append('password', password);
+          formData.append('password_confirmation', passwordconfirmation);
+          formData.append('address', address);
+          formData.append('details', details);
+          formData.append('company_name', company_name);
+          formData.append('avatar', avatarData);
+          formData.append('phones', phones);
+          console.log(formData);
+          dispatch(newUser(formData));
           navigate('/home');
-        };
+     }
 
      return ( 
           <section className="signup-section">

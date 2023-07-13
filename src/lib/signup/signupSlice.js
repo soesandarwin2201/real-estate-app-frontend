@@ -5,16 +5,16 @@ const SIGN_UP = 'house/newuser/SIGNUP';
 
 const token = localStorage.getItem('token') || null;
 
-export const newUser = createAsyncThunk(SIGN_UP, async(userInfo, thunkAPI) => {
+export const newUser = createAsyncThunk(SIGN_UP, async(formdata, thunkAPI) => {
      const API_URL = 'http://127.0.0.1:3000/users';
      const options = {
           method: "POST",
           headers: {
-      'content-type': 'application/json',
+            'Content-Type': 'multipart/form-data' ,
          },
      };
      try {
-       return await axios.post(API_URL, JSON.stringify(userInfo),options);
+       return await axios.post(API_URL, formdata,options);
      }catch(error) {
         return thunkAPI.rejectWithValue(error, "Error creating request");
      }
@@ -43,13 +43,14 @@ const signupSlice = createSlice({
      extraReducers(reduce) {
           reduce
       .addCase(newUser.fulfilled, (state, action) => {
-        localStorage.setItem('token', action.payload.data.token);
+        const formData = action.payload;
+        localStorage.setItem('token', formData.data.token);
         return {
           ...state,
           isLoading: false,
           success: true,
-          token: action.payload.data.token,
-          status: action.payload.status,
+          token: formData.data.token,
+          status: formData.status,
         };
       })
       .addCase(newUser.pending, (state) => ({
