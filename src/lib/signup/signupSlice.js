@@ -1,12 +1,12 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const SIGN_UP = 'house/newuser/SIGNUP/';
+const SIGN_UP = 'house/newuser/SIGNUP';
 
 const token = localStorage.getItem('token') || null;
 
 export const newUser = createAsyncThunk(SIGN_UP, async(userInfo, thunkAPI) => {
-     const API_URL = process.env.NEW_USER_URL;
+     const API_URL = 'http://127.0.0.1:3000/users';
      const options = {
           method: "POST",
           headers: {
