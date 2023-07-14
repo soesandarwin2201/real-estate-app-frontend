@@ -13,13 +13,13 @@ const SignUp = () => {
      const [ name, setName ] = useState('');
      const [ userName, setUserName ] = useState('');
      const [email, setEmail] = useState('');
+     const [phone, setPhone] = useState('');
      const [ password, setPassword ] = useState('');
      const [ passwordconfirmation, setpasswordconfirmation] = useState('');
      const [ address, setAddress ] = useState('');
      const [details, setdetails] = useState('');
      const [company_name, setcompany_name] = useState('');
      const [ avatarData , setAvatarData] = useState(null);
-     const [ phones, setPhones] = useState([]);
 
      const handleSubmit = (e) => {
           e.preventDefault();
@@ -27,13 +27,13 @@ const SignUp = () => {
           formData.append('name', name);
           formData.append('username', userName);
           formData.append('email', email);
+          formData.append('phone', phone);
           formData.append('password', password);
           formData.append('password_confirmation', passwordconfirmation);
           formData.append('address', address);
           formData.append('details', details);
           formData.append('company_name', company_name);
           formData.append('avatar', avatarData);
-          formData.append('phones', phones);
           console.log(formData);
           dispatch(newUser(formData));
           navigate('/home');
@@ -70,12 +70,7 @@ const SignUp = () => {
 
                     <div className="form-items">
                     <label htmlFor="Phone Number" className="form-label">Phone number</label>
-                    <input type="text" name="phone number" placeholder="type your phone number" className="form-input"  onChange={(e) => setPhones(e.target.value)}/>
-                    </div>
-
-                    <div className="form-items">
-                    <label htmlFor="Second Phone Number" className="form-label">Second Phone number(option)</label>
-                    <input type="text" name="second phone number" placeholder="type your section phone number" className="form-input"  onChange={(e) => setPhones(e.target.value)}/>
+                    <input type="text" name="phone number" placeholder="type your phone number" className="form-input"  onChange={(e) => setPhone(e.target.value)}/>
                     </div>
 
                     <div className="form-items">
